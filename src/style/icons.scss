@@ -1,0 +1,148 @@
+
+
+/* Menu Icon - small view only */
+
+.menu-icon {
+    position:relative;
+    z-index:1;
+    overflow:hidden;
+    padding:0;
+
+  a:link,
+  a:visited {
+      padding-left:28px;
+  }
+
+  a:before,
+  a:before {
+      content:"";
+      position:absolute;
+      top:-6px;
+      left:0px;
+  }
+
+  a:before {
+    left:0px;
+    width: 20px;
+    height: 0px;
+    box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
+    background:transparent;
+  }
+
+  a:hover:before,
+  a:focus:before,
+  a:active:before {
+      box-shadow: 0 10px 0 1px #ccf, 0 16px 0 1px #ccf, 0 22px 0 1px #ccf;
+      background:transparent;
+  }
+}
+
+
+.add-icon {
+  $add-icon-size: 19px;
+  $add-icon-weight: 3px;
+  $add-icon-color: #2ba6cb;
+  $add-icon-hover-color: #2ba6cb;
+  z-index:10;
+
+  &:before {
+    content: "";
+    display: block;
+    background: $add-icon-color;
+    width: $add-icon-weight;
+    height: $add-icon-size;
+    //margin-top: $top-margin;
+  }
+
+  &:after {
+      content: "";
+      display: block;
+      background: $add-icon-color;
+      width: $add-icon-size;
+      height:$add-icon-weight;
+      margin-top: -($add-icon-size - $add-icon-weight)/2 - $add-icon-weight;
+      margin-left: -($add-icon-size - $add-icon-weight)/2;
+  }
+
+}
+
+
+
+.delete-icon {
+  // changing size doesn't yet align the :after margins
+  $del-icon-size: 18px;
+  $del-icon-weight: 3px;
+  $del-icon-color: #c60f13;
+
+  &:before {
+      content: "";
+      display: block;
+      z-index:10;
+      width:$del-icon-weight;
+      height:$del-icon-size;
+      margin-left:0px;
+      background:$del-icon-color;
+      /* css3 */
+      -webkit-transform:rotate(45deg);
+      -moz-transform:rotate(45deg);
+      -ms-transform:rotate(45deg);
+      -o-transform:rotate(45deg);
+      transform:rotate(45deg);
+  }
+
+  &:after {
+      content: "";
+      display: block;
+      width:$del-icon-size;
+      height:$del-icon-weight;
+      margin-left: -7px;
+      margin-top:-10px;
+      background:$del-icon-color;
+      /* css3 */
+      -webkit-transform:rotate(45deg);
+      -moz-transform:rotate(45deg);
+      -ms-transform:rotate(45deg);
+      -o-transform:rotate(45deg);
+      transform:rotate(45deg);
+  }
+}
+
+
+.search-icon {
+  a:before {
+      width:6px;
+      height:6px;
+      border:3px solid #c55500;
+      background:transparent;
+      /* css3 */
+      -webkit-border-radius:12px;
+      -moz-border-radius:12px;
+      border-radius:12px;
+  }
+
+  a:after {
+      left:10px;
+      width:3px;
+      height:7px;
+      margin-top:0;
+      /* css3 */
+      -webkit-transform:rotate(-45deg);
+      -moz-transform:rotate(-45deg);
+      -ms-transform:rotate(-45deg);
+      -o-transform:rotate(-45deg);
+      transform:rotate(-45deg);
+  }
+
+  a:hover:before,
+  a:focus:before,
+  a:active:before {
+      border-color:#730800;
+      background:transparent;
+  }
+
+  a:hover:after,
+  a:focus:after,
+  a:active:after {
+      background:#730800;
+  }
+}

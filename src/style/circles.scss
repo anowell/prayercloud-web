@@ -1,0 +1,64 @@
+#friend-list {
+  .icon:before { @extend .add-icon:before; }
+  .icon:after { @extend .add-icon:after; }
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+#circle-form #follower-list {
+  .icon:before { @extend .delete-icon:before; }
+  .icon:after  { @extend .delete-icon:after; }
+}
+
+#circle-view {
+  .details {
+    position: relative;
+  }
+
+  #manage-circle {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    a, button { margin-bottom: 0px; }    
+  }
+
+  #owner {
+    .name:after {
+      text-align: right;
+      font-weight: bold;
+      content: " (Organizer)";
+    }
+  }
+
+}
+
+
+.friend {
+  position: relative;
+  clear: both;
+  padding-bottom: 8px;
+  padding-top: 8px;
+
+  &:hover {
+    background-color: #eee;
+  }
+
+  .icon {
+    position: absolute;
+    right: 5px;
+    top: 18px;
+  }
+
+  .avatar {
+    margin-left: 5px;
+    float: left;
+    display: block;
+  }
+
+  .name {
+    margin-left: 50px;
+    font-size: 1.2em;
+    line-height: 2em;
+  }
+}

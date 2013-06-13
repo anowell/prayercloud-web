@@ -1,0 +1,19 @@
+{
+  "name": "prayercloud",
+  "version": "0.0.1",
+  "main": "public/js/main.js",
+  "ignore": [
+    "node_modules",
+    "components"
+  ],
+  "dependencies" : {
+    "lodash" : "latest",
+    "backbone" : "latest",
+    "zeptojs" : "latest",
+    "jquery" : "latest",
+    "jquery-serialize-object": "latest" ,
+    "snapjs": "snapjs",
+    "blockui": "latest",
+    "foundation" : "latest"
+  }
+}

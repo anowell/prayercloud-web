@@ -1,0 +1,24 @@
+label {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+textarea {
+  font-size: 1.25em;
+  min-height: 5em;
+  // consider autoresize: http://james.padolsey.com/demos/plugins/jQuery/autoresize.jquery.js/view
+}
+
+form.custom .custom {
+  width: 30px;
+  height: 30px;
+}
+
+form.custom .custom.checkbox.checked:before {
+  margin-top: 10px;
+  margin-left: -10px;
+}
+
+form.custom .custom.checkbox:before {
+  font-size: 35px;
+}

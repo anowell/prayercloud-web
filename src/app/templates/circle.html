@@ -1,0 +1,16 @@
+<div id="circle-view">
+  <div class="details">
+    <h2>{{circle.name}}</h2>
+    <div id="manage-circle"></div>
+  </div>
+
+  <% if(circle.followers.length === 0) { %>
+    <h3>This is a private prayer list.</h3>
+  <% } %>
+
+  <div id='owner'></div>
+  <div id='follower-list'></div>
+</div>
+
+
+

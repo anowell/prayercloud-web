@@ -1,0 +1,85 @@
+
+/* Prayer Feed related */
+#prayer-view {
+  .avatar {
+    float: left;
+  }
+  .details {
+    position: relative;
+    margin-left: 130px;
+  }
+  .author {
+    padding-top:75px;
+    padding-bottom: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .date {
+    color: #aaaaaa;
+  }
+  .msg {
+    padding-top: 20px;
+    clear: left;
+    font-size: 1.4em;
+  }
+  #manage-prayer {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    a, button { margin-bottom: 0px; }    
+  }
+}
+
+/* Prayer Feed related */
+#prayer-circle {
+  .heading {
+    position: relative;
+  }
+  #view-circle {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    a, button { margin-bottom: 0px; }   
+  }
+
+  .prayer {
+    position: relative;
+    border-top: 1px solid #ddd;
+    clear: both;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .prayer:hover {
+    background-color: #fbf6ff;
+  }
+
+  .avatar {
+    float: left;
+    margin-top: 5px;
+    display: block;
+  }
+
+  .details {
+    display: block;
+    margin-left: 70px;
+    margin-right: 30px;
+    min-height: 70px;
+  }
+
+  .author {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .msg {
+    font-size: 0.9em;
+  }
+
+  .time-ago {
+    position: absolute;
+    right: 0px;
+    top: 4px;
+    font-size: 0.8em;
+    color: #bbbbbb;
+  }
+}

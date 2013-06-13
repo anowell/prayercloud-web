@@ -1,0 +1,7 @@
+<% _.each(friends, function(friend) { %>
+  <div class="friend" data-id="{{friend._id}}">
+    <div class="avatar"><img src="http://placehold.it/40x40&text=User" /></div>
+    <div class="name">{{friend.displayName}}</div>
+    <div class="icon"></div>
+  </div>
+<% }); %> 

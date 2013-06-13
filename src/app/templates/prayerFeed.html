@@ -1,0 +1,16 @@
+<div id="prayer-circle">
+  <div class="heading">
+    <h3>{{circle.name}}</h3>
+    <div id="view-circle"></div>
+  </div>
+  <% _.each(prayers, function(prayer) { %>
+    <div class="prayer" data-id="{{prayer._id}}">
+      <div class="avatar"><img src="http://placehold.it/60x60&text=User" /></div>
+      <div class="details">
+        <div class="author">{{prayer.author.displayName}}</div>
+        <div class="msg">{{prayer.msg}}</div>
+      </div>
+      <div class="time-ago">{{prayer.timeAgo}}</div>
+    </div>
+  <% }) %>
+</div>

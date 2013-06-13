@@ -1,0 +1,27 @@
+<form id="prayer-form" class="custom">
+  <fieldset>
+    <legend>Prayer Request:</legend>
+    <label class='hide' for='msg'>Prayer Request</label>
+    <textarea id='prayer-msg' type='text' name="msg" placeholder='Enter your prayer request'>{{prayer.msg}}</textarea>
+  </fieldset>
+
+  <% if(circles.length > 0) { %>
+    <% var prayerCircles = _.pluck(prayer.circles, '_id') %>
+    <fieldset data-role="controlgroup">
+      <legend>Share with:</legend>
+      <% _.each(circles, function(circle) { %>
+        <label for="circle_{{circle._id}}">
+          <% var checkState = (_.contains(prayerCircles, circle._id)) ? "checked" : "" %>
+          <input class="hide" type='checkbox' name='circles[]' value='{{circle._id}}' id='circle_{{circle._id}}' {{checkState}} />
+          <span class="custom checkbox {{checkState}}"></span>
+          {{circle.name}}
+        </label>
+        
+      <% }); %>
+    </fieldset>
+  <% } %>
+
+  <div class="right">
+    <button id="save-prayer" class="button">Save Prayer Request</button>
+  </div>
+</form>

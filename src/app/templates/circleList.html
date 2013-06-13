@@ -1,0 +1,13 @@
+<ul id="cicles-sidebar" class="side-nav">
+  <li class="subtleheader">Prayer Circles</li>
+  <li class="divider"></li>
+  <li><a href="/">All prayers</a></li>
+  <% _.each(circles, function(circle) { %>
+      <li><a href="/circles/{{circle.slug}}/prayers">{{circle.name}}</a></li>
+  <% }); %>
+  <li><a href="/circles/private/prayers">Private</a></li>
+  <li class="subtleheader">More</li>
+  <li class="divider"></li>
+  <li><a href="/circles/new">Create Prayer Circle</a></li>
+  <li><a href="/logout">Logout</a></li>
+</ul>

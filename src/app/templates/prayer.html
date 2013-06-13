@@ -1,0 +1,16 @@
+<div id="prayer-view">
+  <div class="avatar"><img src="http://placehold.it/120x120&text=User" /></div>
+  <div class="details">
+    <div class="author">{{prayer.author.displayName}}</div>
+    <div class="date">{{prayer.created_at}}</div>
+    <div id="manage-prayer"></div>
+  </div>
+  <p class="msg">{{prayer.msg}}</p>
+
+  <% if(prayer.circles && prayer.circles.length > 0) { %>
+    <h3>Shared with:</h3>
+    <% _.each(prayer.circles, function(circle) { %>
+        <a href="/circles/{{circle.slug}}/prayers" class="small secondary button">{{circle.name}}</a>
+    <% }); %>
+  <% } %>
+</div>
