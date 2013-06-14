@@ -6,7 +6,12 @@ module.exports = (grunt) ->
       grunt.file.readJSON('package.json')
 
     clean:
-      default:  ["build/**/*"]
+      build:  ["build"]
+      components: ["components"]
+
+    shell:
+      components: 
+        command: 'bower install'      
 
     jst:
       default:
@@ -25,7 +30,7 @@ module.exports = (grunt) ->
         options: 
           transform: ['coffeeify']
           debug: true
-     prod: 
+      prod: 
         src:'src/app/main.coffee'
         dest: 'build/js/prayercloud.js'
         options: 
@@ -39,17 +44,27 @@ module.exports = (grunt) ->
     copy:
       components:
         files: [
-          { src: [ 'components/lodash/dist/lodash.mobile.js' ], dest: 'build/js/lodash.js' }
-          { src: [ 'components/backbone/backbone-min.js' ], dest: 'build/js/backbone.js' }
-          { src: [ 'components/jquery/jquery.min.js' ], dest: 'build/js/jquery.js' }
-          { src: [ 'components/jquery-serialize-object/jquery.serialize-object.compiled.js' ], dest: 'build/js/jquery.serialize-object.js' }
-          { src: [ 'components/snapjs/snap.min.js' ], dest: 'build/js/snap.js' }
-          { src: [ 'components/blockui/jquery.blockUI.js' ], dest: 'build/js/jquery.blockUI.js' }
+          # { src: [ 'components/lodash/dist/lodash.mobile.js' ], dest: 'src/static/js/lodash.js' }
+          { src: [ 'components/backbone/backbone-min.js' ], dest: 'src/static/js/backbone.js' }
+          { src: [ 'components/jquery/jquery.min.js' ], dest: 'src/static/js/jquery.js' }
+          { src: [ 'components/jquery-serialize-object/jquery.serialize-object.compiled.js' ], dest: 'src/static/js/jquery.serialize-object.js' }
+          { src: [ 'components/snapjs/snap.min.js' ], dest: 'src/static/js/snap.js' }
+          # { src: [ 'components/blockui/jquery.blockUI.js' ], dest: 'src/static/js/jquery.blockUI.js' }
         ]
       default:
         files: [
           { expand: true, cwd: 'src/static/', src: [ '**/*' ], dest: 'build/'}
         ]
+
+    uglify: 
+      components: 
+        files:
+          'src/static/js/jquery.blockUI.js': ['components/blockui/jquery.blockUI.js']
+          'src/static/js/lodash.js': ['components/lodash/dist/lodash.mobile.js']
+      default: 
+        files:
+          'build/js/templates.js': ['build/js/templates.js']
+          'build/js/prayercloud.js': ['build/js/prayercloud.js']
 
     watch:
       templates:
@@ -64,17 +79,7 @@ module.exports = (grunt) ->
         files: ["src/app/**/*.coffee", "src/app/**/*.js"]
         tasks: ["browserify:dev"]
         options: { nospawn: true }
-    
-    uglify: 
-      components: 
-        files:
-          'build/js/jquery.blockUI.js': ['components/blockui/jquery.blockUI.js']
-          'build/js/lodash.js': ['components/lodash/dist/lodash.mobile.js']
-      default: 
-        files:
-          'build/js/templates.js': ['build/js/templates.js']
-          'build/js/prayercloud.js': ['build/js/prayercloud.js']
-        
+            
 
   grunt.loadNpmTasks('grunt-contrib-jst')
   grunt.loadNpmTasks('grunt-contrib-copy')
@@ -83,3 +88,8 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-sass'
   grunt.loadNpmTasks('grunt-contrib-clean')
   grunt.loadNpmTasks('grunt-contrib-uglify')
+  grunt.loadNpmTasks('grunt-shell');
+
+  grunt.registerTask('components', ['clean:components', 'shell:components', 'copy:components', 'uglify:components'])
+  grunt.registerTask('default', ['clean:build', 'copy:default', 'sass', 'jst', 'browserify:dev' ])
+  grunt.registerTask('prod', ['clean:build', 'copy:default', 'sass', 'jst', 'browserify:prod', 'uglify:default'])

@@ -5,8 +5,7 @@
   "scripts": {
     "start": "node app"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "engines": {
     "npm": "1.2.x"
   },
@@ -20,6 +19,7 @@
     "grunt-contrib-watch": "~0.4.4",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-uglify": "~0.2.2",
-    "grunt-browserify": "~1.0.2"
+    "grunt-browserify": "~1.0.2",
+    "grunt-shell": "~0.2.2"
   }
 }
