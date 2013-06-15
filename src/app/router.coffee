@@ -116,6 +116,10 @@ module.exports = Backbone.Router.extend(
     )
 
   logout: ->
-    location.href = "/logout"
-
+    $.ajax(
+      type: 'DELETE'
+      url: '/api/auth'
+    )
+    .done( (data, status) -> location.href = "/login" )
+    .fail( (data, status) -> location.href = "/login?logout=failed" )
 )
