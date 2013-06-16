@@ -1,6 +1,3 @@
-# $         = require('jquery'),
-# _         = require('underscore'),
-# Backbone  = require('backbone'),
 Events    = require('./events.coffee')
 
 views = {};

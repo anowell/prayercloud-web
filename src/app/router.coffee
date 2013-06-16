@@ -1,10 +1,7 @@
-#      $         = require('jquery'),
-#      Backbone  = require('backbone')
 app             = require('./app.coffee')
 Vm              = require('./vm.coffee')
 Circle          = require('./models/circle.coffee')
 PrayerFeed      = require('./views/prayerFeed.coffee')
-# CircleListView  = require('./views/circleList.coffee')
 PrayerFormView  = require('./views/prayerForm.coffee')
 CircleFormView  = require('./views/circleForm.coffee')
 CircleView      = require('./views/circleView.coffee')
@@ -87,12 +84,6 @@ module.exports = Backbone.Router.extend(
       prayerForm = Vm.create(app.appView, 'PrayerForm', PrayerFormView, {model : prayer})
       prayerForm.render()
     )
-
-  # circles: ->
-  #   this.changePage(null, ->
-  #     circleList = Vm.create(app.appView, 'CircleList', CircleListView, {collection : app.circles})
-  #     circleList.render()
-  #   )
 
   circle: (slug) ->
     this.changePage(null, ->

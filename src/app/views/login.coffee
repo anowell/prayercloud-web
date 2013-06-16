@@ -1,10 +1,5 @@
 app = require('../app.coffee')
 
-# $           = require('jquery'),
-# _           = require('underscore'),
-# Backbone    = require('backbone'),
-# JST         = require('templates');
-
 module.exports = Backbone.View.extend(
 
   el: "#content"

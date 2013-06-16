@@ -1,10 +1,4 @@
-# app         = require('app'),
-# $           = require('jquery'),
-# _           = require('underscore'),
-# Backbone    = require('backbone'),
-# JST         = require('templates');
 CircleCollection  = require('../collections/circles.coffee')
-
 
 module.exports = Backbone.View.extend(
 

@@ -1,25 +1,5 @@
 app         = require('../app.coffee')
-# $           = require('jquery'),
-# _           = require('underscore'),
-# Backbone    = require('backbone'),
-# JST         = require('templates');
 Circle      = require('../models/circle.coffee')
-      # circleForm  = require('text!templates/circleForm.html'),
-      # followerLI  = require('text!templates/followerListItem.html');
-
-
-# followerList = Backbone.View.extend(
-#   el: ""
-#   template: JST['circle']
-
-#   events:
-#     "click a[data-friend-id]": "addFollower",
-#     "click a[data-follower-id]": "removeFollower"
-
-#   initialize: (options) ->
-
-#   render: () ->    
-# )
 
 module.exports = Backbone.View.extend(
 

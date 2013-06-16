@@ -1,7 +1,3 @@
-# $           = require('jquery'),
-# _           = require('underscore'),
-# Backbone    = require('backbone'),
-# JST         = require('templates');
 app = require('../app.coffee')
 Vm  = require('../vm.coffee')
 DeletePrompt = require('./deletePrompt.coffee')

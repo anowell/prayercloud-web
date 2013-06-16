@@ -1,8 +1,4 @@
 app         = require('../app.coffee')
-# $           = require('jquery'),
-# _           = require('underscore'),
-# Backbone    = require('backbone'),
-# JST         = require('templates');
 Prayer      = require('../models/prayer.coffee')
 
 module.exports = Backbone.View.extend(
@@ -23,8 +19,6 @@ module.exports = Backbone.View.extend(
     html = this.template({'prayer': prayer, 'circles': app.circles.toJSON()})
     
     this.$el.html(html)
-    #$(this.el).trigger('create');
-    #app.appView.enableActionButton("Save", "check", this.savePrayer, this);
     this # maintains chainability
 
   savePrayer: (evt) ->
@@ -43,7 +37,6 @@ module.exports = Backbone.View.extend(
 
 
     if this.model.isValid()
-      # app.appView.disableActionButton()
 
       if this.model.isNew()
         app.prayers.add(this.model)
@@ -54,7 +47,6 @@ module.exports = Backbone.View.extend(
         success: (model, res, options) ->
           Backbone.history.navigate('/', {trigger: true})
         error: (model, res, options) =>
-          #app.appView.enableActionButton("Save", "check", that.savePrayer, that)
           #$.mobile.loading("hide")
           app.prayers.remove(this.model)
           console.log("Failed to save prayer.")

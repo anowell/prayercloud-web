@@ -1,6 +1,3 @@
-#_                   = require('../vendor/lodash.js')
-# Backbone          = require('../vendor/backbone.js')
-# $
 PrayerCollection  = require('./collections/prayers.coffee')
 CircleCollection  = require('./collections/circles.coffee')
 UserCollection    = require('./collections/users.coffee')

@@ -1,14 +1,9 @@
-# _           = require('underscore'),
-#  Backbone    = require('backbone'),
 Prayer      = require('../models/prayer.coffee')
 
   
 module.exports = Backbone.Collection.extend(
   url: '/api/prayers'
   model: Prayer
-
-  # If we ever move to incrementing IDs
-  # comparator: (prayer) -> -prayer.get('id')
 
   comparator: (a, b) ->
     # Reverse order of _id which is timestamp-derived

@@ -1,8 +1,3 @@
-# app         = require('app'),
-# $           = require('jquery'),
-# _           = require('underscore'),
-# Backbone    = require('backbone'),
-# JST         = require('templates');
 PrayerCollection  = require('../collections/prayers.coffee')
 
 module.exports = Backbone.View.extend(
