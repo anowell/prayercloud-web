@@ -21,7 +21,11 @@ html, body {
   height: auto;
   z-index: 2;
   background-color: #fff;
-  //overflow: auto;
+  overflow: auto;
+}
+
+#page, .nav-bar {
+  min-width: 320px;
 }
 
 #drawers {
@@ -36,7 +40,7 @@ html, body {
 }
 
 #main {
-//  overflow: auto;
+  overflow: auto;
 }
 
 #sidepanel {
