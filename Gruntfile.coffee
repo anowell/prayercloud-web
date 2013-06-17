@@ -79,6 +79,10 @@ module.exports = (grunt) ->
         files: ["src/app/**/*.coffee", "src/app/**/*.js"]
         tasks: ["browserify:dev"]
         options: { nospawn: true }
+      static:
+        files: ["src/static/**/*"]
+        tasks: ["copy:default"]
+        options: { nospawn: true }
             
 
   grunt.loadNpmTasks('grunt-contrib-jst')
