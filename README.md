@@ -17,6 +17,30 @@ The simplest way to use PrayerCloud-Web is to create that dir as a symlink to Pr
 
     ln -s path/to/prayercloud-api/public path/to/prayercloud-web/build
 
+Alternatively, you can setup a webserver to serve from each project similar to how it works in production.
+Here is a sample [Nginx](http://wiki.nginx.org/Install) config that would start prayercloud at http://localhost:8080
+
+    server {
+      listen 8080 default_server;
+      listen [::]:8080 default_server ipv6only=on;
+      server_name localhost;
+
+      root /path/to/prayercloud-web/build;
+      index index.html;
+
+      location / {
+        try_files $uri /index.html =404;
+      }
+
+      location /api/ {
+        proxy_pass http://127.0.0.1:3000;
+      }
+
+      # eventually this route should be deprecated
+      location /auth/ {
+        proxy_pass http://127.0.0.1:3000;
+      }
+    }
 
 
 Developer Tip
