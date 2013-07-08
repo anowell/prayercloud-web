@@ -1,6 +1,7 @@
 CircleCollection  = require('../collections/circles.coffee')
 
 module.exports = Backbone.View.extend(
+  __name__: __filename
 
   el: "#sidebar"
   template : JST["circleList"]

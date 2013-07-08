@@ -1,6 +1,7 @@
 app = require('../app.coffee')
 
 module.exports = Backbone.View.extend(
+  __name__: __filename
 
   el: "#content"
   template : JST['login'],

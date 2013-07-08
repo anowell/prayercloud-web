@@ -3,6 +3,7 @@ Vm  = require('../vm.coffee')
 DeletePrompt = require('./deletePrompt.coffee')
 
 module.exports = Backbone.View.extend(
+  __name__: __filename
 
   el: "#content"
   template : JST['prayer']

@@ -2,6 +2,7 @@ app = require('../app.coffee')
       
 
 module.exports = Backbone.View.extend(
+  __name__: __filename
 
   el: "#modal"
   template : JST['deletePrompt']

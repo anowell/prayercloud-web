@@ -2,6 +2,7 @@ app         = require('../app.coffee')
 Prayer      = require('../models/prayer.coffee')
 
 module.exports = Backbone.View.extend(
+  __name__: __filename
 
   el: "#content"
   

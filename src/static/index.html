@@ -24,7 +24,7 @@
     <div class="contain-to-grid fixed">
       <nav class="nav-bar">
         <div class="row">
-          <div id="open-sidepanel" class="nav left">
+          <div id="open-sidepanel" class="nav left show-for-small">
             <span class="menu-icon"><a href="#">&nbsp;</a></span>
           </div>
           <div class="nav right">
@@ -47,6 +47,13 @@
   </div>
   <div id="modal" class="small reveal-modal"></div>
 
+  <script type="text/javascript">
+    var isProd  = window.location.host.match('prayercloud.com') !== null
+    var prodKey = "3bad66d9-d158-4c77-8c30-4a88e8935559";
+    var devKey  = "2953c383-0860-4de8-ba6e-17d472b7c2a3";
+    var apiKey  = (isProd) ? prodKey : devKey
+    var Caliper = { config: { apiKey: apiKey } };
+  </script>
   <script src="/js/jquery.js"></script>
   <script src="/js/custom.modernizr.js"></script>
   <script src="/js/lodash.js"></script>
@@ -55,6 +62,7 @@
   <script src="/js/jquery.blockUI.js"></script>  
   <script src="/js/snap.js"></script>  
   <script src="/js/backbone.js"></script>
+  <script src="//d2yr92gots5pio.cloudfront.net/caliper.backbone-0.2.1.min.js"></script>
   <script src="/js/templates.js"></script>  
   <script src="/js/prayercloud.js"></script>  
 </body>
