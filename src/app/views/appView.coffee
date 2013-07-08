@@ -4,6 +4,8 @@ CircleList  = require('./circleList.coffee');
 #DonateView  = require('./views/donateView')
 
 module.exports = Backbone.View.extend(
+  __name__: __filename
+
   el: 'body'
   events:   
     'click #open-sidepanel' : 'toggleSidePanel'
