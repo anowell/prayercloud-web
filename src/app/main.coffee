@@ -36,8 +36,3 @@ $(document).on("click", "a[href]", (evt) ->
     evt.preventDefault();
     Backbone.history.navigate(href.attr, true) unless href.attr == '#'
 )
-
-app.snapper = new Snap(
-  element: document.getElementById('page')
-  disable: "right"
-)

@@ -11,7 +11,18 @@ module.exports = Backbone.View.extend(
     'click #open-sidepanel' : 'toggleSidePanel'
     'click #sidepanel a' : 'closeSidePanel'
   
-  initialize: ->
+  initialize: (options) ->
+    app.snapper = new Snap(
+      element: document.getElementById('page')
+      disable: "right"
+    )
+    $(window).on('resize', this.configureSnapper)
+    this.configureSnapper()
+
+  remove: ->
+      $(window).off('resize', this.configureSnapper) # Clean up after yourself.
+      this.$el.remove() # The default implementation does this.
+      this # maintains chainability
 
   render: ->
     # Pass the appView down into the footer so we can render the visualisation
@@ -25,11 +36,20 @@ module.exports = Backbone.View.extend(
     sidePanelView?.render()
 
   
+
+
   hideRequestPrayerButton: ->
     $('#request-prayer').hide()
 
   showRequestPrayerButton: ->
     $('#request-prayer').show()
+
+
+  configureSnapper: () ->
+    if $(window).width() >= 768
+      app.snapper.disable()
+
+    app.snapper.enable()
 
   toggleSidePanel: (evt) ->
     evt.preventDefault()
