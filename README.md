@@ -1,3 +1,18 @@
+PrayerCloud-Web
+===============
+
+PrayerCloud was a back-burner project that had to be put aside to focus on some other projects. I hope to return to it someday, but in the meantime I'm parking it here on the chance of finding contributors who might share a similar vision.
+
+PrayerCloud-Web is the backbone.js-based web app build for [PrayerCloud-API](https://github.com/anowell/prayercloud-api). Disclaimer: it was my first stab at a backbone.js app and it lacks tests. For what it's worth, I 'shopped up a more polished design that I never had a chance to implement. Here's a glimpse of that redesign:
+
+
+<img width="200" src="https://dl.dropboxusercontent.com/u/39033486/PrayerCloud/p-feed-menu.png" /> 
+<img width="200" src="https://dl.dropboxusercontent.com/u/39033486/PrayerCloud/p-feed.png" /> 
+<img width="200" src="https://dl.dropboxusercontent.com/u/39033486/PrayerCloud/p-view.png" /> 
+<img width="200" src="https://dl.dropboxusercontent.com/u/39033486/PrayerCloud/p-form.png" />
+
+
+
 Getting Started
 ---------------
 
