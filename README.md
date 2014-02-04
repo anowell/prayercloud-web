@@ -10,6 +10,8 @@ PrayerCloud-Web is the backbone.js-based web app build for [PrayerCloud-API](htt
 <img width="200" src="https://dl.dropboxusercontent.com/u/39033486/PrayerCloud/p-feed.png" /> 
 <img width="200" src="https://dl.dropboxusercontent.com/u/39033486/PrayerCloud/p-view.png" /> 
 <img width="200" src="https://dl.dropboxusercontent.com/u/39033486/PrayerCloud/p-form.png" />
+<img width="200" src="https://dl.dropboxusercontent.com/u/39033486/PrayerCloud/c-view.png" />
+<img width="200" src="https://dl.dropboxusercontent.com/u/39033486/PrayerCloud/c-view-delete.png" />
 
 
 
