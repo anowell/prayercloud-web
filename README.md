@@ -18,7 +18,7 @@ PrayerCloud-Web is the backbone.js-based web app build for [PrayerCloud-API](htt
 Getting Started
 ---------------
 
-PrayerCloud-Web depends on PrayerCloud-Api. See [PrayerCloud-API Getting Started](https://bitbucket.org/anowell/prayercloud-api/wiki/Home) first.
+PrayerCloud-Web depends on PrayerCloud-Api. See [PrayerCloud-API Getting Started](https://github.com/anowell/prayercloud-api) first.
 
     npm install
     npm install grunt-cli
